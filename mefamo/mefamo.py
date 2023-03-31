@@ -128,7 +128,7 @@ class Mefamo():
             except ValueError:
                 input = self.input  
 
-        if os.name == 'nt':
+        if os.name == 'nt' and !isinstance(self.input, str):
             # will improve webcam input startup on windows 
             cap = cv2.VideoCapture(input, cv2.CAP_DSHOW)   
         else:
